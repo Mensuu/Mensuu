@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function nameLastName(){
+
+            var n = document.form1.txtName.value;
+            var l = document.form1.txtLAstName.value;
+            //const n = document.forms.namedItem("txtName");
+            var k = n.slice(1,3);
+            //const l = document.forms.namedItem("txtLastName");
+            //for (let i = 0; i < l.length; i++) {
+            //    var t = l[l.length-1];
+            //}
+            var t = l[l.length-1];
+            document.write(k + "<br/>");
+            document.write(t); 
+        }
+
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <div>Adınız<input autocomplete="off" type="text" name="txtName" style="width: 200px; text-align:left;" maxlength="50"></div>
+        <div>Soyadınız<input autocomplete="off" type="text" name="txtLAstName" style="width: 200px; text-align:left;" maxlength="50"></div>
+        <input type="button" name="btnSubmit" value="Kaydet" onclick="javascript:nameLastName();">
+    </form>
+</body>
+</html>

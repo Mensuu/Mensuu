@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script language="JavaScript">
+        function clickMe()
+        {
+            // var ve let değişken tanımlamaya yarayan JS komutlarıdır.
+            var myTc = document.form1.txtTC.value;
+            window.alert("Benim TC Numaram " + myTc); // string birleştirme
+            // Buna merge veya concatenate işlemi denir.
+        }
+        function printStars()
+        {
+            var yukseklik = document.form1.intYukseklik.value;
+            var txtStars = "";
+            for(i=1; i <=yukseklik; i++)
+            {
+                for(j = 1; j <= i; j++)
+                {
+
+                    txtStars = txtStars + "*";
+                }
+                txtStars = txtStars + "<br>";
+            }
+           document.getElementById("star").innerHTML = txtStars; //innerHTML boşluğa demektir.Burdaki boşluk <p><p/> taglarının arasıdır.
+           
+        }
+    </script>
+</head>
+<body>
+        <form name="form1">
+            Yükseklik Değeri <input type="text" name="intYukseklik" size="20">
+            <br/>
+            <input type="button" name="btnSubmit" value="Göner" onclick="javascript:printStars();">
+            <p  id="star"></p>
+        </form>
+</body>
+</html>

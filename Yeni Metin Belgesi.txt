@@ -1,0 +1,70 @@
+
+Alan Adı (Domain Name) : www.fbu.edu.tr
+A Kaydı -> IP Yönlendirmesi (Örn : 255.255.0.0)
+
+Statik IP'nin olduğu server'da
+IIS (Internet Information Services) -> Microsoft'un web server'ı
+        www.fbu.edu.tr -> C:\Projeler\Proje1
+        www.fbu.edu.tr/4.html
+
+Kullanıcın örneğin www.fbu.edu.tr/4.html bu adresi bir web tarayıcısında yazarak enter'a basması -> Request (Client)
+Sunucnun ilgili klasör altındaki dosyayı çalıştırarak kullanıcının web tarayacısında sonuç göstermesi -> Response (Server)
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+QueryString
+?ID&x=2&name=menekse
+Request.QueryString["ID"] metoduyla okunur.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+CSS
+
+1.Inline (Satır İçi)
+    <input ... style="width:..."
+Artıları;
+    Kolay ve hızlı uygulamaktır.
+Eksiler;
+    Tek tek yazmak ve genele uyarlacak şekilde yazamamaktır.
+
+2.Internal (Dahili)
+
+<head>
+    <style>
+          class still
+          {
+            ....
+          }
+    <style/>
+    <input class = "still">
+Artıları;
+    Genele uygun ve ortak bir stil oluşturmak,merkezden tek yerden yönetimdir.
+Eksileri;
+    Sadece o dokümanda geçerli, klasördeki diğer dokümanlara etkisi yoktur.
+
+3.External / Linked (Harici / Bağlantılı)
+Ayrı bir dökümanda bir .css uzantılı dosya oluşur.Örneğin style.css olsun.
+
+style.css
+    <style>
+        class still
+        {
+          ....
+        }
+    <style/>
+    Aynı dosyada bu stil dosyasını referans vermektir.
+    <link ref="still">
+
+    Kullanım da öncekiyle aynıdır;
+    <input class = "still">
+
+Artıları;
+    Tüm dökümanlarda ortak stil oluşturup,kullanılmasını sağlar.
+Eksileri;
+    Herhangi bir dosyaya içinden yönetimi zordur.
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------
